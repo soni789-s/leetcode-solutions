@@ -1,0 +1,9 @@
+class Solution:
+    def minNumberOperations(self, target: List[int]) -> int:
+        oper=0
+        prev=0
+        for curr in target:
+            if curr>prev:
+                oper+=(curr-prev)
+            prev=curr
+        return oper
